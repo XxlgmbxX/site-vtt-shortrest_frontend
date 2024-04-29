@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.archivo-black-regular {
+    font-family: "Archivo Black", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+  
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgba(217, 217, 217,10)
+}
+
+.login{
+    position: absolute;
+    left: 50em;
+}
+
+.login > h2{
+    font-weight: 600;
+    margin-bottom: .5em;
+}
+
+.loginForm{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.loginInput{
+    border: none;
+    padding: 15px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.menu {
+    position: absolute;
+    display: flex;
+    /*top: 0.5em;
+    left: 0.5em;*/
+    width: auto;
+    height: 4em;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgba(169, 169, 169, 0.4);
+    border-radius: 6px;
+    margin: 0.5em;
+}
+
+    .menu .options-container {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        
+    }
+
+    .menu-option {
+        z-index: 9;
+        flex:1;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 3.5em;
+        cursor: pointer;
+        position: relative;
+        border-radius: 6px 6px 0px 0px ;
+
+        &:hover .sub-menu {
+            opacity: 1;
+            z-index: 9;
+            pointer-events: all;   
+    
+        }
+
+        &:hover{
+            background-color: rgba(169, 169, 169, 0.4);
+        
+        }
+
+        
+    }
+
+    .menu-option img{
+        height: 2em;
+    }
+
+
+    .menu-option div button{
+    background-color: transparent;
+    border: transparent;
+    gap: 10px;
+    padding: 10px;
+
+
+    }
+    .menu-option div button:hover{
+    cursor: pointer;
+    }
+
+    .sub-menu {
+        border-radius: 0px 0px 6px 6px;
+        width: 3.5em;
+        position: absolute;
+        top: 64px;
+        padding: 0.5em;
+        transition: all;
+        opacity: 0;
+        z-index: -9;
+        pointer-events: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: .5;
+        background-color: rgba(169, 169, 169, 0.4);
+    }
+
+
+.chat{
+    position: absolute;
+    background-color: rgba(169, 169, 169, 0.35);
+    height: 100%;
+    width: 23em;
+    right: 0;
+    border-radius: 8px 0 0 8px;
+
+}
+
+    .sender{
+        position: absolute;
+        bottom: 0;
+        background-color: rgba(169, 169, 169, 0.35);
+        width: 100%;
+        height: 10%;
+        border-radius: 8px 8px 0 8px;
+
+        display: flex;
+        justify-content: flex-start;
+
+    }
+
+
+    .messagesArea {
+        height: 100%;
+        width: 100%;
+        max-height: 53.5em; /* Defina a altura máxima do container */
+        overflow-y: auto; /* Adicione uma barra de rolagem vertical quando necessário */
+        display: flex;
+        flex-direction: column; /* Altera o fluxo das mensagens para coluna */
+        padding: 1em;
+    }
+    
+    /* .messageArea{
+        display: flex;
+        background-color: black;
+        height: 100%;
+        width: 100%;
+        flex-direction: column;
+        max-height: 400px;Defina a altura máxima do container 
+        overflow-y: auto;
+
+        
+    } */
+::-webkit-scrollbar,::-webkit-scrollbar-button,::-webkit-scrollbar-track,::-webkit-scrollbar-track-piece,::-webkit-scrollbar-thumb,::-webkit-scrollbar-corner{
+    text-decoration: none;
+}
+      
+
+    .userSender{
+        font-family: "Archivo Black", sans-serif;
+        font-weight: 600;
+        font-size: larger;
+        /* margin-right: 9em; */
+        
+        
+    }
+
+     
+
+    .messages{
+        margin-top: .2em;
+        margin-bottom: .5em;
+        margin-left: 1.6em;
+        padding: .8em;
+        width: 90%;
+        height: auto;
+        border-radius: 4px;
+        word-wrap: break-word;
+        background-color: rgba(169, 169, 169, 0.35);
+        
+    }
+
+
+    .sender input{
+        width: 95%;
+        height: 100%;
+        outline: 0; 
+        border: 0;
+        background-color: transparent;
+        border-radius: 8px 8px 0 8px;
+        
+        font-family: "Archivo Black", sans-serif;
+        font-weight: 600;
+        font-size: larger;
+        word-wrap: break-word;
+
+        padding-top: 30px;
+        padding-left: 25px;
+        resize: none;
+        overflow: hidden;
+        
+
+
+        /* &:focus{
+            padding-top: 10px;
+            padding-bottom: 40px;
+            
+        } */
+
+        
+    }
+
+    .sender textarea{
+        width: 95%;
+        height: 100%;
+        outline: 0; 
+        border: 0;
+        background-color: transparent;
+        border-radius: 8px 8px 0 8px;
+        
+        font-family: "Archivo Black", sans-serif;
+        font-weight: 600;
+        font-size: larger;
+        word-wrap: break-word;
+
+        padding-top: 30px;
+        padding-left: 25px;
+        resize: none;
+        overflow: hidden;
+        
+
+
+        /* &:focus{
+            padding-top: 10px;
+            padding-bottom: 40px;
+            
+        } */
+
+        
+    }
+
+
+    
+.sheet{
+    position: absolute;
+    bottom: 0;
+    width: 37em;
+    height: 27em;
+    background-color: rgba(169, 169, 169, 0.35);
+    border-radius: 0 8px 0 0;
+
+}
+    .menu-char{
+        display: flex;
+        justify-content: flex-start;
+        width: 100%;
+        height: 9%;
+
+    }
+
+    .menu-char-options{
+        display: flex;
+        width: 80%;
+        align-items: center; 
+        justify-content: center;
+        font-family: "Archivo Black", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        
+        
+        &:hover{
+            background-color: rgba(169, 169, 169, 0.35);
+            color:black;
+        }
+        
+    }
+
+    .menu-char-selector{
+        display: flex;
+        width: 30%;
+        align-items: center; 
+        justify-content: center;
+        border-radius: 0px 8px 0px 0px;
+        
+        &:hover{
+            background-color: rgba(169, 169, 169, 0.35);
+            color:black;
+        }
+    }
+
+    .menu-char button{
+        background-color: transparent;
+        width: 100%;
+        height: 100%;
+        border: transparent;
+        cursor: pointer;
+        font-family: "Archivo Black", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+
+
+    }
+    
+    .menu-char-selector img{
+        height: 2em;
+    }
