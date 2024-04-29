@@ -71,7 +71,7 @@ const handleLogin = (event) => {
     login.style.display = "none"
 
 
-    websocket = new WebSocket("ws://shortrest.netlify.app")
+    websocket = new WebSocket("wss://site-teste-kawk.onrender.com")
     websocket.onmessage = processMessage
 
 
