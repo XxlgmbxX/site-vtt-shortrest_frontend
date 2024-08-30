@@ -44,11 +44,12 @@ const createMessage = (content, userName) => {
     
 
     const messageReturn = `
-            <span class="userSender">${userName}</span>
+            
             <div class="messages">
+            <span class="userSender">${userName}</span>
             ${content}
             </div>`
-            
+
     return messageReturn
 
 }
