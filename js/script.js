@@ -43,7 +43,13 @@ const createMessage = (content, userName) => {
     div.innerHTML += content
     
 
-    return div
+    const messageReturn = `
+            <span class="userSender">${userName}</span>
+            <div class="messages">
+            ${content}
+            </div>`
+            
+    return messageReturn
 
 }
 const scrollScreen = () => {
