@@ -12,8 +12,6 @@ const messagesArea = document.querySelector(".messagesArea")
 
 const textarea = document.querySelector('.sender textarea');
 
-var last;
-
 textarea.addEventListener('keydown', function(event) {
     if (event.keyCode === 13 && !event.shiftKey) {
         event.preventDefault();
@@ -44,26 +42,15 @@ const createMessage = (content, userName) => {
     span.innerHTML = userName
     div.innerHTML += content
     
-    if(last != userName){
-        
-        const messageReturn = `
-                <div class="messages">
-                <span class="userSender">${userName}</span>
-                ${content}
-                </div>`
-            last = userName;
-    
-        return messageReturn
-    }
-    else{
-        const messageReturn = `
-                <div class="messages">
-                ${content}
-                </div>`
-            last = userName;
-    
-        return messageReturn
-    }
+
+    const messageReturn = `
+            
+            <div class="messages">
+            <span class="userSender">${userName}</span>
+            ${content}
+            </div>`
+
+    return messageReturn
 
 }
 const scrollScreen = () => {
