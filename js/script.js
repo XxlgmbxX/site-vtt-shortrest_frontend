@@ -42,14 +42,12 @@ const createMessage = (content, userName) => {
     span.innerHTML = userName
     div.innerHTML += content
     
-    const roll = Math.floor(Math.random() * (20 - 1)) + 1;
 
     const messageReturn = `
             
             <div class="messages">
             <span class="userSender">${userName}</span>
             ${content}
-            ${roll}
             </div>`
 
     return messageReturn
