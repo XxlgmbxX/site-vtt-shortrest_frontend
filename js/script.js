@@ -50,7 +50,7 @@ const createMessage = (content, userName) => {
             ${content}
             </div>`
 
-    return messageReturn
+    return div
 
 }
 const scrollScreen = () => {
