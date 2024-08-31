@@ -60,7 +60,7 @@ const createRoll = (userName) => {
     div.appendChild(roll);
 
     span.innerHTML = userName;
-    roll.innerHTML = Math.floor(Math.random() * 20) + 1;  // Corrigido para gerar números inteiros de 1 a 20
+    roll.innerHTML = Math.floor(Math.random() * 20) + 1; 
 
     return div;
 };
@@ -76,7 +76,8 @@ const processMessage = ({ data }) => {
     let element;
     if (type === "roll") {
         element = createRoll(userName);
-    } else {
+    } 
+    if (type = "message") {
         element = createMessage(content, userName);
     }
 
@@ -100,14 +101,14 @@ const handleLogin = (event) => {
     };
 };
 
-const sendMessage = (messageContent, type = "message") => {
+const sendMessage = (messageContent) => {
     event.preventDefault();
 
     const message = {
         userId: user.id,
         userName: user.name,
         content: messageContent,
-        type: type
+        type: "message"
     };
 
     websocket.send(JSON.stringify(message));
@@ -118,7 +119,7 @@ const sendRoll = () => {
     const message = {
         userId: user.id,
         userName: user.name,
-        type: "roll" // Especifica que esta mensagem é um "roll"
+        type: "roll"
     }
     websocket.send(JSON.stringify(message));
 }
