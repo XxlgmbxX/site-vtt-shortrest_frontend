@@ -29,7 +29,7 @@ const user = {id: "", name: ""}
 let websocket
 
 const createMessage = (content, userName) => {
-    const div = document.createElement("div")
+    /*const div = document.createElement("div")
     const span = document.createElement("span")
     const lineBreak = document.createElement("br");
     const text = document.createElement("p")
@@ -41,20 +41,20 @@ const createMessage = (content, userName) => {
     div.appendChild(text)
 
     span.innerHTML = userName
-    text.innerHTML = content
+    text.innerHTML = content*/
     
 
-    /* const messageReturn = `
+    const messageReturn = `
             
             <div class="messages">
             <span class="userSender">${userName}</span>
-            ${content}
+            <p>${content}</p>
             </div>`
 
     return messageReturn
-*/
 
-    return div
+
+    //return div
 }
 const scrollScreen = () => {
     //const messagesArea = document.querySelector('.messagesArea');
