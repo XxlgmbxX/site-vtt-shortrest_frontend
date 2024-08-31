@@ -41,8 +41,7 @@ const createMessage = (content, userName) => {
     div.appendChild(p)
 
     span.innerHTML = userName
-    //div.innerHTML += content
-    p.innerHTML = content
+    div.innerHTML += content
     
 
     /* const messageReturn = `
