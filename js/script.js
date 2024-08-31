@@ -71,11 +71,10 @@ const scrollScreen = () => {
 };
 
 const processMessage = ({ data }) => {
-    const { type, userId, userName, content, rollDice} = JSON.parse(data);
+    const { type, userId, userName, content} = JSON.parse(data);
 
     let element;
     if (type === "roll") {
-        content = Math.floor(Math.random() * rollDice) + 1; 
         element = createRoll(userName, content);
     } 
     if (type === "message") {
@@ -120,7 +119,7 @@ const sendRoll = (dice) => {
     const roll = {
         userId: user.id,
         userName: user.name,
-        rollDice: dice,
+        content: Math.floor(Math.random() * dice) + 1,
         type: "roll"
     }
     websocket.send(JSON.stringify(roll));
