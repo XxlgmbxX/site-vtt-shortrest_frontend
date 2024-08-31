@@ -116,3 +116,33 @@ const sendMessage = () => {
 loginForm.addEventListener("submit", handleLogin)
 //senderForm.addEventListener("submit", sendMessage)
 
+const processRoll = ({ data })=>{
+    const {userId, userName, content} = (JSON.parse(data))
+
+    const element = createRoll(userName)
+
+    messagesArea.appendChild(element)
+
+    scrollScreen()
+
+}
+
+const createRoll = (userName) => {
+    const div = document.createElement("div")
+    const span = document.createElement("span")
+    const lineBreak = document.createElement("br")
+    const text = document.createElement("p")
+    const roll = document.createElement("p")
+
+    div.classList.add("messages")
+    span.classList.add("userSender")
+
+    div.appendChild(span)
+    div.appendChild(lineBreak)
+    div.appendChild(roll)
+
+    span.innerHTML = userName
+    roll.innerHTML = Math.random() * (20 - 1) + 1;
+
+    return div
+}
