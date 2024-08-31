@@ -43,7 +43,7 @@ const createMessage = (content, userName) => {
     div.innerHTML += content
     
 
-    const messageReturn = `
+    /* const messageReturn = `
             
             <div class="messages">
             <span class="userSender">${userName}</span>
@@ -51,7 +51,9 @@ const createMessage = (content, userName) => {
             </div>`
 
     return messageReturn
+*/
 
+    return div
 }
 const scrollScreen = () => {
     //const messagesArea = document.querySelector('.messagesArea');
@@ -78,7 +80,7 @@ const handleLogin = (event) => {
     login.style.display = "none"
 
 
-    websocket = new WebSocket("wss://site-frontend-espt.onrender.com")
+    websocket = new WebSocket("wss://site-teste-kawk.onrender.com")
     websocket.onmessage = processMessage
 
 
