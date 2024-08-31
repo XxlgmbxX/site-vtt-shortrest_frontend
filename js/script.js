@@ -46,7 +46,7 @@ const createMessage = (content, userName) => {
     return div;
 };
 
-const createRoll = (userName) => {
+const createRoll = (userName, rollDice) => {
     const div = document.createElement("div");
     const span = document.createElement("span");
     const lineBreak = document.createElement("br");
@@ -60,7 +60,7 @@ const createRoll = (userName) => {
     div.appendChild(roll);
 
     span.innerHTML = userName;
-    roll.innerHTML = Math.floor(Math.random() * 20) + 1; 
+    roll.innerHTML = Math.floor(Math.random() * rollDice) + 1; 
 
     return div;
 };
@@ -75,7 +75,7 @@ const processMessage = ({ data }) => {
 
     let element;
     if (type === "roll") {
-        element = createRoll(userName);
+        element = createRoll(userName, rollDice);
     } 
     if (type === "message") {
         element = createMessage(content, userName);
@@ -115,13 +115,14 @@ const sendMessage = (messageContent) => {
     textarea.value = "";
 };
 
-const sendRoll = () => {
-    const message = {
+const sendRoll = (dice) => {
+    const roll = {
         userId: user.id,
         userName: user.name,
+        rollDice: dice,
         type: "roll"
     }
-    websocket.send(JSON.stringify(message));
+    websocket.send(JSON.stringify(roll));
 }
 
 loginForm.addEventListener("submit", handleLogin);
