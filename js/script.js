@@ -32,7 +32,7 @@ const createMessage = (content, userName) => {
     const div = document.createElement("div")
     const span = document.createElement("span")
     const lineBreak = document.createElement("br");
-    const text = document.createElement("p")
+    //const text = document.createElement("p")
     div.classList.add("messages")
     span.classList.add("userSender")
 
