@@ -32,16 +32,16 @@ const createMessage = (content, userName) => {
     const div = document.createElement("div")
     const span = document.createElement("span")
     const lineBreak = document.createElement("br");
-    //const text = document.createElement("p")
+    const text = document.createElement("p")
     div.classList.add("messages")
     span.classList.add("userSender")
 
     div.appendChild(span)
     div.appendChild(lineBreak)
-    div.appendChild(p)
+    div.appendChild(text)
 
     span.innerHTML = userName
-    div.innerHTML += content
+    text.innerHTML = content
     
 
     /* const messageReturn = `
