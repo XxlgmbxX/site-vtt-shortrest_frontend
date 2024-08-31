@@ -71,7 +71,7 @@ const scrollScreen = () => {
 };
 
 const processMessage = ({ data }) => {
-    const { type, userId, userName, content } = JSON.parse(data);
+    const { type, userId, userName, content, rollDice} = JSON.parse(data);
 
     let element;
     if (type === "roll") {
