@@ -78,7 +78,7 @@ const processMessage = ({ data }) => {
         element = createRoll(userName, content);
     } 
     if (type === "message") {
-        element = createMessage(content, userName);
+        element = createMessage(userName, content);
     }
 
     messagesArea.appendChild(element);
