@@ -29,32 +29,38 @@ const user = {id: "", name: ""}
 let websocket
 
 const createMessage = (content, userName) => {
-    /*const div = document.createElement("div")
+    const div = document.createElement("div")
     const span = document.createElement("span")
-    const lineBreak = document.createElement("br");
+    const lineBreak = document.createElement("br")
     const text = document.createElement("p")
+    const roll = documente.createElement("p")
+
     div.classList.add("messages")
     span.classList.add("userSender")
 
     div.appendChild(span)
     div.appendChild(lineBreak)
     div.appendChild(text)
+    div.appendChild(lineBreak)
+    div.appendChild(roll)
 
     span.innerHTML = userName
-    text.innerHTML = content*/
+    text.innerHTML = content
+    roll.innerHTML = Math.random() * (20 - 1) + 1;
+
     
 
-    const messageReturn = `
+    /* const messageReturn = `
             
             <div class="messages">
             <span class="userSender">${userName}</span>
-            <p>${content}</p>
+            ${content}
             </div>`
 
     return messageReturn
+*/
 
-
-    //return div
+    return div
 }
 const scrollScreen = () => {
     //const messagesArea = document.querySelector('.messagesArea');
