@@ -77,7 +77,7 @@ const processMessage = ({ data }) => {
     if (type === "roll") {
         element = createRoll(userName);
     } 
-    if (type = "message") {
+    if (type === "message") {
         element = createMessage(content, userName);
     }
 
