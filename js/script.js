@@ -33,7 +33,7 @@ const createMessage = (content, userName) => {
     const span = document.createElement("span")
     const lineBreak = document.createElement("br")
     const text = document.createElement("p")
-    const roll = documente.createElement("p")
+    const roll = document.createElement("p")
 
     div.classList.add("messages")
     span.classList.add("userSender")
