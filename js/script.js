@@ -80,7 +80,7 @@ const handleLogin = (event) => {
     login.style.display = "none"
 
 
-    websocket = new WebSocket("wss://site-teste-kawk.onrender.com")
+    websocket = new WebSocket("wss://site-frontend-espt.onrender.com")
     websocket.onmessage = processMessage
 
 
