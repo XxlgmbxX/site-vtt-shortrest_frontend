@@ -43,7 +43,7 @@ const createMessage = (content, userName) => {
     div.innerHTML += content
     
 
-    /* const messageReturn = `
+    const messageReturn = `
             
             <div class="messages">
             <span class="userSender">${userName}</span>
@@ -51,9 +51,7 @@ const createMessage = (content, userName) => {
             </div>`
 
     return messageReturn
-*/
 
-    return div
 }
 const scrollScreen = () => {
     //const messagesArea = document.querySelector('.messagesArea');
