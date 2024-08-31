@@ -27,7 +27,7 @@ const user = {id: "", name: ""};
 
 let websocket;
 
-const createMessage = (content, userName) => {
+const createMessage = (userName, content) => {
     const div = document.createElement("div");
     const span = document.createElement("span");
     const lineBreak = document.createElement("br");
@@ -46,7 +46,7 @@ const createMessage = (content, userName) => {
     return div;
 };
 
-const createRoll = (userName, rollDice) => {
+const createRoll = (userName, content) => {
     const div = document.createElement("div");
     const span = document.createElement("span");
     const lineBreak = document.createElement("br");
@@ -59,8 +59,8 @@ const createRoll = (userName, rollDice) => {
     div.appendChild(lineBreak);
     div.appendChild(roll);
 
-    span.innerHTML = userName;
-    roll.innerHTML = Math.floor(Math.random() * rollDice) + 1; 
+    span.innerHTML = userName
+    roll.innerHTML = content
 
     return div;
 };
@@ -75,7 +75,8 @@ const processMessage = ({ data }) => {
 
     let element;
     if (type === "roll") {
-        element = createRoll(userName, rollDice);
+        content = Math.floor(Math.random() * rollDice) + 1; 
+        element = createRoll(userName, content);
     } 
     if (type === "message") {
         element = createMessage(content, userName);
