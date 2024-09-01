@@ -85,7 +85,7 @@ const handleLogin = (event) => {
     user.name = loginInput.value;
     login.style.display = "none";
 
-    websocket = new WebSocket("wss://shortrest-backend.vercel.app");
+    websocket = new WebSocket("wss://site-teste-kawk.onrender.com");
     websocket.onmessage = processMessage;
 
     websocket.onerror = function(error) {
