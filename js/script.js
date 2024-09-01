@@ -116,6 +116,7 @@ const sendMessage = (messageContent) => {
     textarea.value = "";
 };
 
+//função pra mandar o roll pro server
 const sendRoll = (dice) => {
     const roll = {
         userId: user.id,
