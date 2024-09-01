@@ -101,7 +101,7 @@ const handleLogin = (event) => {
         console.error("Erro ao conectar ao servidor WebSocket:", error);
     };
 };
-
+//função pra mandar o roll pro server
 const sendMessage = (messageContent) => {
     event.preventDefault();
 
