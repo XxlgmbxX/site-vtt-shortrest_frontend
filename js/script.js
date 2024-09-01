@@ -71,7 +71,7 @@ const handleLogin = (event) => {
     user.id = crypto.randomUUID();
     user.name = loginInput.value;
     login.style.display = "none";
-    websocket = new WebSocket("wss://site-frontend-espt.onrender.com");
+    websocket = new WebSocket("wss://site-teste-kawk.onrender.com");
     websocket.onmessage = processMessage;
     websocket.onerror = function(error) {
         console.error("Erro ao conectar ao servidor WebSocket:", error);
