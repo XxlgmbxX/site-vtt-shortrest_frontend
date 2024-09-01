@@ -88,6 +88,7 @@ const sendMessage = (messageContent) => {
     websocket.send(JSON.stringify(message));
     textarea.value = "";
 };
+//manda mensagem pra o servidor
 const sendRoll = (dice) => {
     const roll = {
         userId: user.id,
